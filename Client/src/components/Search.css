@@ -1,0 +1,42 @@
+.searchfield {
+    padding: 6px 2px; /* Reduce the padding to make the table fit */
+    width: 100%; /* Set the width to 100% to fill the div */
+    border-radius: 5px;
+    margin: auto;
+    border: 1px solid #ccc;
+    background-color: #dadada6b;
+    margin-bottom: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    min-width: 400px;
+    margin-top: 20px;
+}
+
+/* Header styling */
+th, td {
+    padding: 20px 50px; /* Reduce the padding to make the table fit */
+    border: 2px solid #bb4500;
+    text-align: left;
+    background-color: rgb(155, 155, 155);
+    margin: 5px;
+
+}
+
+.searchbtn {
+    margin-left: 25px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}

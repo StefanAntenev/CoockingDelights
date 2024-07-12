@@ -1,0 +1,20 @@
+{
+    "todo_1": {
+        "_id": "recipie_1",
+        "name": "Spaghetti Carbonara",
+        "image": "https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-master768-v2.jpg?width=1280&quality=75&auto=webprecipe1.jpg",
+        "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper."
+    },
+    "todo_2": {
+        "_id": "recipie_2",
+        "name": "Chicken Alfredo",
+        "image": "https://www.budgetbytes.com/wp-content/uploads/2022/07/Chicken-Alfredo-above-500x500.jpg",
+        "description": "Creamy and rich, this chicken Alfredo recipe is perfect for a family dinner."
+    },
+    "todo_3": {
+        "_id": "recipie_3",
+        "name": "Vegetable Stir-fry",
+        "image": "https://images.immediate.co.uk/production/volatile/sites/30/2008/01/Vegetable-stir-fry-b669c05.jpg",
+        "description": "A quick and healthy meal full of fresh vegetables and savory sauce."
+    }
+}

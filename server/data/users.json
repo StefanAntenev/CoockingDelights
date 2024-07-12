@@ -1,0 +1,13 @@
+{
+    "user1": {
+    "email": "gosho@abv.bg",
+    "password": "123",
+    "repass": "123"
+    },
+    
+    "user2": {
+    "email": "gosho@abv.bg",
+    "password": "123",
+    "repass": "123"
+    }
+}

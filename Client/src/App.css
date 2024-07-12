@@ -1,0 +1,235 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* NAVIGATION */
+
+nav ul {
+  list-style-type: none;
+  /* Removes the default list item markers */
+  padding: 1;
+  /* Removes the default padding */
+  margin: 0;
+  /* Removes the default margin */
+  display: flex;
+  /* Displays the list items in a row */
+}
+
+nav ul li {
+  margin-right: 20px;
+  /* Adds some space between the list items */
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+  /* Removes the margin from the last item */
+}
+
+nav ul li a {
+  text-decoration: none;
+  /* Removes the underline from the links */
+  color: rgb(255, 255, 255);
+  /* Sets the text color */
+}
+
+nav {
+  position: absolute;
+  /* Positions the nav bar at the top */
+  top: 0;
+  /* Aligns the nav bar to the top */
+  width: 100%;
+  /* Makes the nav bar span the full width */
+  /* background-color: #333; */
+  background-image: linear-gradient(to right, #333,rgb(124, 124, 124), #bb4500);
+  /* Sets a background color */
+  padding: 20px 0;
+  /* Adds padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Adds a subtle shadow for depth */
+}
+
+main {
+  padding-top: 60px;
+  /* Adds space to the top of the main content */
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #bb4500;
+  color: rgb(255, 255, 255);
+  padding: 40px 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #777;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section p {
+  margin: 10px 0;
+}
+
+.social-links a {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ddd;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #555;
+  margin-top: 20px;
+}
+
+/* RECIPE CARDS */
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Three cards per row, adjusting to available width */
+  gap: 20px;
+  /* Gap between recipe cards */
+}
+
+.recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 0 2px 4px rgba(0, 0, 0, 0.1); */
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dadada6b;
+  overflow: hidden;
+
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  /* Three cards per row, adjusting to available width */
+  /* gap: 5px; */
+  /* Gap between recipe cards */
+
+}
+
+.recipe-card img {
+  width: 100%;
+  max-width: 500px;
+  /* Set a maximum width for the image */
+  height: 400px;
+  /* Set a fixed height for the image */
+  object-fit: cover;
+  /* Ensure the image covers the container while maintaining aspect ratio */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card img:hover {
+  transform: scale(1.1);
+  /* Scales the image to 110% on hover */
+}
+
+.recipe-card h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.recipe-card p {
+  color: #555;
+  text-align: center;
+}
+
+.aelement{
+  color: black;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+}
