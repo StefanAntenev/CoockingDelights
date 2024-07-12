@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
 import Navigation from './components/Navigation'
+import Home from './components/Home'
 import Main from './components/Main'
 import Create from './components/Create'
 import Footer from './components/Footer'
@@ -10,6 +11,7 @@ import Login from './components/Login'
 import About from './components/About'
 import Contacts from './components/Contacts'
 import Recipie from './components/Recipie'
+import Recipies from './components/Recipies'
 
 import './App.css'
 
@@ -21,7 +23,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/recipies" element={<Recipie />} />
+                <Route path="/recipies" element={<Recipies />} />
                 <Route path="/create" element={<Create />} />
                 <Route path="/search" element={<Search />} />
                 <Route path="/register" element={<Register />} />
