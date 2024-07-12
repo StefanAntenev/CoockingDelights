@@ -33,8 +33,8 @@ export default function Create() {
 
     return (
         <>
-            <h1>Add your recipe</h1>
             <div className="create-form">
+            <h1>Add your recipe</h1>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="name">Name</label>
                     <input

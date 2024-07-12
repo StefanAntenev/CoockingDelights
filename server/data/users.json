@@ -2,12 +2,22 @@
     "user1": {
     "email": "gosho@abv.bg",
     "password": "123",
-    "repass": "123"
+    "repass": "123",
+    "role": "admin",
+    "username": "Stefan Antenev",
+    "phone": "0888888888",
+    "address": "Sofia, Bulgaria",
+    "age": "34"
     },
     
     "user2": {
-    "email": "gosho@abv.bg",
+    "email": "pesho@abv.bg",
     "password": "123",
-    "repass": "123"
+    "repass": "123",
+    "role": "user",
+    "username": "Ivelina Anteneva",
+    "phone": "0888888888",
+    "address": "Sofia, Bulgaria",
+    "age": "29"
     }
 }
