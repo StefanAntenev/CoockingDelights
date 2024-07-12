@@ -12,6 +12,7 @@ import About from './components/About'
 import Contacts from './components/Contacts'
 import Recipie from './components/Recipie'
 import Recipies from './components/Recipies'
+import Profile from './components/Profile'
 
 import './App.css'
 
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contacts" element={<Contacts />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
             <Footer />
 

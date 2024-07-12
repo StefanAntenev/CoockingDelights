@@ -1,3 +1,4 @@
+import './Recipie.css';
 
 export default function Recipie(props) {
     

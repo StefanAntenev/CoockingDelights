@@ -18,6 +18,7 @@ export default function Navigation() {
                     <li><a className="navbutton" href="/contacts" >Contact</a></li>
                     <li><a className="navbutton" href="/about" >About</a></li>
                     <li><a className="navbutton" href="/register" onClick={handleLogout}>Logout</a></li>
+                    <li><a className="profilebutton" href="/profile" >Profile</a></li>
                 </ul>
             </nav>
         );

@@ -22,8 +22,8 @@ export default function Main() {
         <>
             <main>
                 <Home />
+                    <h1>Latest Recipie</h1>
                 <div className="content">
-                    <h2>Latest Recipie</h2>
                     {recipies.map(recipie => <Recipie
                         key={recipie._id}
                         name={recipie.name}

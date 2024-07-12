@@ -16,18 +16,22 @@ export default function Create() {
         fetch('http://localhost:3030/jsonstore/recipies', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
             },
             body: JSON.stringify({ name, image, description }),
         })
             .then(response => response.json())
             .then(data => {
-                // Handle the response from the server
-                console.log('Server response:', data);
+            // Handle the response from the server
+            console.log('Server response:', data);
+            // Reset form fields
+            setName('');
+            setImage('');
+            setDescription('');
             })
             .catch(error => {
-                // Handle any errors that occurred during the request
-                console.error('Error:', error);
+            // Handle any errors that occurred during the request
+            console.error('Error:', error);
             });
     };
 

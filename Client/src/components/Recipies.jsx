@@ -1,12 +1,10 @@
+import './Recipies.css';
+
 import { useState, useEffect } from 'react';
 
-import Home from "./Home";
 import Recipie from "./Recipie";
-import Contacts from './Contacts';
-import About from './About';
 
 export default function Recipies() {
-
     const [recipies, setRecipies] = useState([]);
     useEffect(() => {
         fetch('http://localhost:3030/jsonstore/recipies')
@@ -20,8 +18,8 @@ export default function Recipies() {
     return (
         <>
             <main>
+                    <h2>All Recipies</h2>
                 <div className="content">
-                    <h2>Latest Recipie</h2>
                     {recipies.map(data => <Recipie
                         key={data._id}
                         name={data.name}
