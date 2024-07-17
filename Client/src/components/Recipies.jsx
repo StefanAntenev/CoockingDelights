@@ -24,8 +24,8 @@ export default function Recipies() {
                         key={data._id}
                         name={data.name}
                         img={data.image}
-                        description={data.description}
-                    />)}
+                        // description={data.description}
+                        />)}
                 </div>
             </main>
         </>

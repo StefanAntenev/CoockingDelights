@@ -13,6 +13,8 @@ import Contacts from './components/Contacts'
 import Recipie from './components/Recipie'
 import Recipies from './components/Recipies'
 import Profile from './components/Profile'
+import NotFound from './components/NotFound'
+import ScrollBtn from './components/ScrollBtn'
 
 import './App.css'
 
@@ -31,7 +33,10 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/*" element={<NotFound />} />
+
             </Routes>
+            <ScrollBtn />
             <Footer />
 
         </>

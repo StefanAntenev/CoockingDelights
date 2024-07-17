@@ -28,7 +28,7 @@ export default function Main() {
                         key={recipie._id}
                         name={recipie.name}
                         img={recipie.image}
-                        description={recipie.description}
+                        // description={recipie.description}
                     />)}
                 </div>
             </main>
