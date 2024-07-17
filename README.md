@@ -1,7 +1,7 @@
 Coocking Delights
 
 Steps:
-Main Steps:
+ - Initialize Project
 
 - [x] add client
 - [x] add server
