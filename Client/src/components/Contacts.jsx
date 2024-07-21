@@ -1,6 +1,8 @@
 import './Contacts.css';
 
 export default function Contacts() {
+    console.log('Contacts rendered');
+
     return (
         <div className="contactscontainer">
             <h2>Contact Us</h2>
