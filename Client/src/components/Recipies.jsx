@@ -1,31 +1,27 @@
 import './Recipies.css';
 
 import { useState, useEffect } from 'react';
+import * as recipiesAPI from '../api/recipies-api';
 
 import Recipie from "./Recipie";
 
 export default function Recipies() {
     const [recipies, setRecipies] = useState([]);
+
     useEffect(() => {
-        fetch('http://localhost:3030/jsonstore/recipies')
-            .then(response => response.json())
-            .then(result => {
-            const data = Object.values(result);
-            setRecipies(data);
-            });
+        recipiesAPI.getALL()
+            .then(recipies => setRecipies(recipies));
     }, []);
 
     return (
         <>
             <main>
-                    <h2>All Recipies</h2>
+                <h2>All Recipes</h2>
                 <div className="content">
-                    {recipies.map(data => <Recipie
-                        key={data._id}
-                        name={data.name}
-                        img={data.image}
-                        // description={data.description}
-                        />)}
+                    {recipies.length > 0
+                        ? recipies.map(data => <Recipie kye={data._id} {...data} />)
+                        : <div className="missing-recipies"><h2>No recipes available</h2></div>
+                    }
                 </div>
             </main>
         </>
