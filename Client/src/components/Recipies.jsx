@@ -16,7 +16,7 @@ export default function Recipies() {
     return (
         <>
             <main>
-                <h2>All Recipes</h2>
+                <h1>All Recipes</h1>
                 <div className="content">
                     {recipies.length > 0
                         ? recipies.map(data => <Recipie kye={data._id} {...data} />)
