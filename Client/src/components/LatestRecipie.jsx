@@ -1,19 +1,14 @@
+import './LatestRecipie.css';
+
 import './Recipie.css';
 import { Link } from 'react-router-dom';
 
-import Details from './Details';
-
-export default function Recipie({
+export default function LatestRecipie({
     _id,
     name,
     image,
     description,
-    Ingredients,
-    Instructions
 }) {
-
-
-
     return (
         <div className="recipe-card">
             <Link to={`/recipies/${_id}/details`}>

@@ -9,3 +9,12 @@ export const getALL = async () => {
 
     return recipies;
 };
+
+export const getOne = (recipieId) => requester.get(`${BASE_URL}/${recipieId}`)
+
+const recipieAPI = {
+    getALL,
+    getOne
+};
+
+export default recipieAPI;

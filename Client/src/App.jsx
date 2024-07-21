@@ -7,6 +7,7 @@ import Create from './components/Create'
 import Footer from './components/Footer'
 import Search from './components/Search'
 import Register from './components/Register'
+import Details from './components/Details'
 import Login from './components/Login'
 import About from './components/About'
 import Contacts from './components/Contacts'
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/" element={<Main />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/recipies" element={<Recipies />} />
+                <Route path="/recipies/:recipieId/details" element={<Details />} />
                 <Route path="/create" element={<Create />} />
                 <Route path="/search" element={<Search />} />
                 <Route path="/register" element={<Register />} />
