@@ -14,28 +14,28 @@ Steps:
 - [ ] Add the README.md info
 
 ## Comments
--[] Create service for nested resource `comments`
--[] Post comment to server
--[] Read comments from server
--[] Add comments in the component
--[] clear comments form
+- [ ] Create service for nested resource `comments`
+- [ ] Post comment to server
+- [ ] Read comments from server
+- [ ] Add comments in the component
+- [ ] clear comments form
 
 ## API Hooks
--[x] Form Hook
--[] RecipeAPI Hooks
--[] Comment Hooks
+- [x] Form Hook
+- [ ] RecipeAPI Hooks
+- [ ] Comment Hooks
 
 ## Authentication
--[] Auth API
--[] Auth API Hook
--[] Auth state & context
--[] Login
--[] Register
--[] Logout
+- [ ] Auth API
+- [ ] Auth API Hook
+- [ ] Auth state & context
+- [ ] Login
+- [ ] Register
+- [ ] Logout
 
 ## UI Implementation
--[] Dynamic Navigation
--[] Create recipe
-    -[] Api function
-    -[] Hook
--[] Fix latest games fetch
+- [ ] Dynamic Navigation
+- [ ] Create recipe
+    - [ ] Api function
+    - [ ] Hook
+- [ ] Fix latest games fetch
