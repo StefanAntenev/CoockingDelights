@@ -1,24 +1,20 @@
 import './Details.css';
-import { useEffect, useState, } from 'react';
+import { useState, } from 'react';
 import { useParams } from 'react-router-dom';
 import recipieAPI from '../api/recipies-api';
 import Comments from './Comments';
+import { useGetOneRecipe } from '../hooks/useRecipes';
 
 export default function Recipie() {
-    const [recipie, setRecipie] = useState({});
     const { recipieId } = useParams();
-
-    useEffect(() => {
-        (async () => {
-            const result = await recipieAPI.getOne(recipieId);
-
-            setRecipie(result);
-        })();
-    });
+    const [recipie, setRecipie] = useGetOneRecipe(recipieId);
 
     return (
         <>
             <div className="recipe-card-details">
+            <div className='backBtn'>
+                <button onClick={(e) => { e.preventDefault(); window.history.back(); }}>Go Back</button>
+            </div>
                 <img className="details-img" src={recipie.image} alt="Recipie image" />
                 <h2>{recipie.name}</h2>
                 <p>{recipie.description}</p>
@@ -28,7 +24,7 @@ export default function Recipie() {
                 <p>{recipie.Instructions}</p>
             </div>
             <div>
-            <Comments />
+                <Comments />
             </div>
         </>
     );

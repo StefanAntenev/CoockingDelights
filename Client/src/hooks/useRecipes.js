@@ -4,7 +4,7 @@ import recipieAPI from '../api/recipies-api';
 
 export function useGetAllRecipes() {
     const [recipes, setRecipes] = useState([]);
-    
+
     useEffect(() => {
         (async () => {
             const result = await recipieAPI.getALL();
@@ -14,4 +14,21 @@ export function useGetAllRecipes() {
     }, []);
 
     return [recipes, setRecipes];
+}
+
+export function useGetOneRecipe(recipieId) {
+    const [recipie, setRecipie] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            const result = await recipieAPI.getOne(recipieId);
+
+            setRecipie(result);
+        })();
+    }, [recipieId]);
+
+    return [
+        recipie,
+        setRecipie
+    ];
 }
