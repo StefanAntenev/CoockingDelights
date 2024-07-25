@@ -21,9 +21,9 @@ Steps:
 -[] clear comments form
 
 ## API Hooks
+-[x] Form Hook
 -[] RecipeAPI Hooks
 -[] Comment Hooks
--[] Form Hook
 
 ## Authentication
 -[] Auth API
@@ -38,3 +38,4 @@ Steps:
 -[] Create recipe
     -[] Api function
     -[] Hook
+-[] Fix latest games fetch
