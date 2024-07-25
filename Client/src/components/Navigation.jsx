@@ -28,11 +28,11 @@ export default function Navigation() {
         return (
             <nav>
                 <ul>
-                    <li><a className="navbutton" href="/" >Home</a></li>
-                    <li><a className="navbutton" href="/login" >Login</a></li>
-                    <li><a className="navbutton" href="/register" >Register</a></li>
-                    <li><a className="navbutton" href="/contacts" >Contact</a></li>
-                    <li><a className="navbutton" href="/about" >About</a></li>
+                    <li><Link className="navbutton" to="/" >Home</Link></li>
+                    <li><Link className="navbutton" to="/login" >Login</Link></li>
+                    <li><Link className="navbutton" to="/register" >Register</Link></li>
+                    <li><Link className="navbutton" to="/contacts" >Contact</Link></li>
+                    <li><Link className="navbutton" to="/about" >About</Link></li>
                 </ul>
             </nav>
         );

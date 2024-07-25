@@ -1,45 +1,51 @@
+import { useForm } from '../hooks/useForm';
 import './Login.css';
+import { useLogin } from '../hooks/useAuth';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+    const login = useLogin();
+    const navigate = useNavigate();
+    const { values, changeHandler, submitHandler } = useForm(
+        { email: '', password: '' },
+        async ({ email, password }) => {
+            try {
+                await login(email, password)
+                navigate('/');
+            } catch (err){
+                console.error(err.message);
+            }
+        }
+    );
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-
-        fetch('http://localhost:3030/jsonstore/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, password }),
-        })
-            .then(response => response.json())
-            .then(data => {
-                // Handle the response from the server
-                console.log('Server response:', data);
-                localStorage.setItem('email', data.email);
-                localStorage.setItem('password', data.password);
-                localStorage.setItem('username', data.username);
-                localStorage.setItem('id', data._id);
-                window.location.pathname = '/';
-            })
-            .catch(error => {
-                // Handle any errors that occurred during the request
-                console.error('Error:', error);
-            });
-    }
 
     return (
         <>
             <div className="login">
                 <h1>Login</h1>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={submitHandler}>
                     <label className="userlable" htmlFor="email">Email:</label>
-                    <input className="userinput" type="text" id="email" name="email" required placeholder='...' />
+                    <input
+                        className="userinput"
+                        type="text"
+                        id="email"
+                        name="email"
+                        value={values.email}
+                        onChange={changeHandler}
+                        required placeholder='...'
+                    />
                     <label className="passwordlable" htmlFor="password">Password:</label>
-                    <input className="passwordinput" type="password" id="password" name="password" required placeholder='...' />
-                    <button className="loginbtn" type="submit">Login</button>
+                    <input
+                        className="passwordinput"
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={values.password}
+                        onChange={changeHandler}
+                        required placeholder='...'
+                    />
+                    <input className="loginbtn" type="submit" value="Login" />
                     <p>Dont have an account? <a className="aelement" href="/register">Register</a></p>
                 </form>
             </div>

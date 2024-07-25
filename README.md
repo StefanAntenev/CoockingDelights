@@ -22,11 +22,12 @@ Steps:
 
 ## API Hooks
 - [x] Form Hook
-- [ ] RecipeAPI Hooks
+- [x] RecipeAPI Hooks
 - [ ] Comment Hooks
 
 ## Authentication
 - [ ] Auth API
+    - [x] Login
 - [ ] Auth API Hook
 - [ ] Auth state & context
 - [ ] Login
