@@ -32,3 +32,9 @@ export function useGetOneRecipe(recipieId) {
         setRecipie
     ];
 }
+
+export function useCreateRecipe() {
+    const recipeCreateHandler = (recipeData) => recipieAPI.create(recipeData)
+
+    return recipeCreateHandler;
+}

@@ -1,53 +1,46 @@
 import React, { useState } from 'react';
 import './Create.css';
+import { useForm } from '../hooks/useForm';
+import { useNavigate } from 'react-router-dom';
+import { useCreateRecipe } from '../hooks/useRecipes';
+
+const initialValues = {
+    name: '',
+    image: '',
+    description: '',
+    Ingredients: '',
+    Instructions: ''
+}
 
 export default function Create() {
-    const [name, setName] = useState('');
-    const [image, setImage] = useState('');
-    const [description, setDescription] = useState('');
+    const navigate = useNavigate();
+    const createRecipe = useCreateRecipe();
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        // Access the form data here (name, image, description)
-        console.log('Name:', name);
-        console.log('Image:', image);
-        console.log('Description:', description);
-        // Form data, sending it to a server
-        fetch('http://localhost:3030/jsonstore/recipies', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, image, description }),
-        })
-            .then(response => response.json())
-            .then(data => {
-            // Handle the response from the server
-            console.log('Server response:', data);
-            // Reset form fields
-            setName('');
-            setImage('');
-            setDescription('');
-            })
-            .catch(error => {
-            // Handle any errors that occurred during the request
-            console.error('Error:', error);
-            });
-    };
+    const createHandler = async (values) => {
+        try {
+            const { _id } = await createRecipe(values);
+            navigate(`/recipies/${_id}/details`);
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+
+    const { changeHandler, values, submitHandler } = useForm(initialValues, createHandler);
+
 
     return (
         <>
             <div className="create-form">
-            <h1>Add your recipe</h1>
-                <form onSubmit={handleSubmit}>
+                <h1>Add your recipe</h1>
+                <form onSubmit={submitHandler}>
                     <label htmlFor="name">Name</label>
                     <input
                         type="text"
                         id="name"
                         name="name"
                         placeholder="Name"
-                        value={name}
-                        onChange={(event) => setName(event.target.value)}
+                        value={values.name}
+                        onChange={changeHandler}
                     />
                     <label htmlFor="image">Image</label>
                     <input
@@ -55,18 +48,36 @@ export default function Create() {
                         id="image"
                         name="image"
                         placeholder="Image URL"
-                        value={image}
-                        onChange={(event) => setImage(event.target.value)}
+                        value={values.image}
+                        onChange={changeHandler}
                     />
+                    <label htmlFor="Ingredients">Ingredients</label>
+                    <textarea
+                        id="Ingredients"
+                        name="Ingredients"
+                        placeholder="Ingredients"
+                        value={values.Ingredients}
+                        onChange={changeHandler}
+                    ></textarea>
+                    <label htmlFor="Ingredients">Instructions</label>
+                    <textarea
+                        id="Instructions"
+                        name="Instructions"
+                        placeholder="Instructions"
+                        value={values.Instructions}
+                        onChange={changeHandler}
+                    ></textarea>
                     <label htmlFor="description">Description</label>
                     <textarea
                         id="description"
                         name="description"
                         placeholder="Description"
-                        value={description}
-                        onChange={(event) => setDescription(event.target.value)}
+                        value={values.description}
+                        onChange={changeHandler}
                     ></textarea>
-                    <button className="btnCreate" type="submit">Create</button>
+                    <div>
+                        <input className="btnCreate" type="submit" value="Create"></input>
+                    </div>
                 </form>
             </div>
         </>

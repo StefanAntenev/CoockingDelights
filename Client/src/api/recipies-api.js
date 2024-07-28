@@ -1,6 +1,6 @@
 import * as requester from './requester';
 
-const BASE_URL = 'http://localhost:3030/jsonstore/recipies'
+const BASE_URL = 'http://localhost:3030/data/recipies'
 
 export const getALL = async () => {
     const result = await requester.get(BASE_URL);
@@ -12,9 +12,12 @@ export const getALL = async () => {
 
 export const getOne = (recipieId) => requester.get(`${BASE_URL}/${recipieId}`)
 
+export const create = (recipeData) => requester.post(`${BASE_URL}`, recipeData);
+
 const recipieAPI = {
     getALL,
-    getOne
+    getOne,
+    create
 };
 
 export default recipieAPI;
