@@ -28,16 +28,16 @@ Steps:
 ## Authentication
 - [ ] Auth API
     - [x] Login
-    - [ ] Register
+    - [x] Register
     - [ ] Logout
 - [ ] Auth API Hook
     - [x] Login
-    - [ ] Register
+    - [x] Register
     - [ ] Logout
 - [x] Auth state & context
 - [x] Token management
 - [x] Login
-- [ ] Register
+- [x] Register
 - [ ] Logout
 - [ ] Authorized Requests
 
