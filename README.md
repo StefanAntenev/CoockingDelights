@@ -28,11 +28,18 @@ Steps:
 ## Authentication
 - [ ] Auth API
     - [x] Login
+    - [ ] Register
+    - [ ] Logout
 - [ ] Auth API Hook
-- [ ] Auth state & context
-- [ ] Login
+    - [x] Login
+    - [ ] Register
+    - [ ] Logout
+- [x] Auth state & context
+- [x] Token management
+- [x] Login
 - [ ] Register
 - [ ] Logout
+- [ ] Authorized Requests
 
 ## UI Implementation
 - [ ] Dynamic Navigation
