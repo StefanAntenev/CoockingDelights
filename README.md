@@ -42,7 +42,7 @@ Steps:
 - [ ] Authorized Requests
 
 ## UI Implementation
-- [ ] Dynamic Navigation
+- [x] Dynamic Navigation
 - [ ] Create recipe
     - [ ] Api function
     - [ ] Hook
