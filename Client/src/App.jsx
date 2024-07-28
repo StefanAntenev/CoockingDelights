@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
+import { AuthContext } from './contexts/AuthContext'
 
 import Navigation from './components/Navigation'
 import Home from './components/Home'
@@ -36,7 +37,7 @@ function App() {
 
     return (
         <AuthContext.Provider value={contextData}>
-            <>
+            <div id="box">
                 <Navigation />
                 <Routes>
                     <Route path="/" element={<Main />} />
@@ -55,7 +56,7 @@ function App() {
                 <ScrollBtn />
                 <Footer />
 
-            </>
+            </div>
         </AuthContext.Provider>
     );
 }

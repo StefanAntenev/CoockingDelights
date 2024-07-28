@@ -9,22 +9,6 @@ import { useGetOneRecipe } from '../hooks/useRecipes';
 export default function Recipie() {
     const { recipieId } = useParams();
     const [recipie, setRecipie] = useGetOneRecipe(recipieId);
-    // const [username, setUsername] = useState('');
-    // const [comment, setComment] = useState('');
-
-    // const commentSubmitHandler = async (e) => {
-    //     e.preventDefault();
-
-    //     const newComment = await commentsAPI.create(recipieId, username, comment);
-
-    //     setRecipie(prevState => ({
-    //         ...prevState,
-    //         comments: {
-    //             ...prevState.comments,
-    //             [newComment._id]: newComment,
-    //         }
-    //     }));
-    // }
 
     return (
         <>
