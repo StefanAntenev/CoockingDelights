@@ -2,18 +2,6 @@ import './Search.css'
 
 export default function Search() {
 
-    async function search() {
-        const search = document.querySelector('.searchbar').value;
-        const res = await fetch(`http://localhost:3030/jsonstore/recipes`, {
-            headers: {
-                'Content-Type': 'application/json',
-                // Add any additional headers you need
-            },
-        });
-        const data = await res.json();
-        console.log(data);
-    }
-
     return (
         <>
             <div className="searchfield">

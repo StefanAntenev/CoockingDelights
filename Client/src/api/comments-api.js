@@ -1,6 +1,6 @@
 import requester from './requester';
 
-const BASE_URL = 'http://localhost:3030/jsonstore/recipies';
+const BASE_URL = 'http://localhost:3030/data/recipies';
 
 const buildUrl = (recipieId) => `${BASE_URL}/${recipieId}/comments`;
 

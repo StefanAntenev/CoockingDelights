@@ -4,6 +4,7 @@ import { useRegister } from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from '../hooks/useForm';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const initialValues = { username: '', email: '', password: '', repeatPassword: '' }
 
@@ -89,7 +90,7 @@ export default function Register() {
                 {error && <div className="error">{error}</div>}
                 <div>
                     <input className="registerbtn" type="submit" value="register"></input>
-                    <p >Already have an account? <a className="aelement" href="/login">Login</a></p>
+                    <p >Already have an account? <Link to="/login" className="aelement">Login</Link></p>
                 </div>
             </form>
         </>

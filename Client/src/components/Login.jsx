@@ -48,7 +48,7 @@ export default function Login() {
                         required placeholder='...'
                     />
                     <input className="loginbtn" type="submit" value="Login" />
-                    <p>Dont have an account? <a className="aelement" href="/register">Register</a></p>
+                    <p>Dont have an account? <Link to="/register" className="aelement">Register</Link></p>
                 </form>
             </div>
         </>
