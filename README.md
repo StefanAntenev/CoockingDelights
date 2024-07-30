@@ -39,11 +39,11 @@ Steps:
 - [x] Login
 - [x] Register
 - [ ] Logout
-- [ ] Authorized Requests
+- [x] Authorized Requests
 
 ## UI Implementation
 - [x] Dynamic Navigation
-- [ ] Create recipe
-    - [ ] Api function
-    - [ ] Hook
+- [x] Create recipe
+    - [x] Api function
+    - [x] Hook
 - [ ] Fix latest games fetch
