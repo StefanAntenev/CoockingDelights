@@ -9,7 +9,7 @@ export default function Recipies() {
     return (
         <>
             <main>
-                {recipes.length > 0 && <h1>All Recipes</h1>}
+                <h1>All Recipes</h1>
                 <div className="content">
                     {recipes.length > 0
                         ? recipes.map(data => <Recipie key={data._id} {...data} />)
