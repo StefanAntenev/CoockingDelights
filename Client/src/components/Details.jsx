@@ -13,6 +13,7 @@ export default function Recipie() {
     const { recipieId } = useParams();
     const [comments, setComments] = useGetAllComments(recipieId);
     const createComment = useCreateComment();
+    const { userId } = useAuthContext();
     const [recipie] = useGetOneRecipe(recipieId);
     const { isAuthenticated } = useAuthContext();
     const {
@@ -24,11 +25,13 @@ export default function Recipie() {
             const newComment = await createComment(recipieId, comment)
 
             setComments(oldComments => [...oldComments, newComment]);
+            // dispatch({ type: 'ADD_COMMENT', comment: {...newComment, author: {email}} });
         } catch (err) {
             console.error(err.message)
         }
     });
 
+    const isOwner = userId === recipie._ownerId
 
     return (
         <>
@@ -43,20 +46,13 @@ export default function Recipie() {
                 <p>{recipie.Ingredients}</p>
                 <h2>Instructions:</h2>
                 <p>{recipie.Instructions}</p>
-            </div>
-
-            <div className="comments">
-                <h2>Comments:</h2>
-                <ul>
-                        {comments.map(comment => (
-                    <div className='separatecomment'>
-                            <li key={comment._id}>
-                                <p>{comment.author.email}: {comment.text}</p>
-                            </li>
+                {isOwner && (
+                    <div>
+                        <input href='#' className='button' value='Edit'></input>
+                        <input href='#' className='button' value='Delete'></input>
+                        <a></a>
                     </div>
-                        ))}
-                </ul>
-                {comments.length === 0 && <p>No comments yet</p>}
+                )}
             </div>
 
             {isAuthenticated && (
@@ -73,6 +69,22 @@ export default function Recipie() {
                     </form>
                 </article>
             )}
+
+            <div className="comments">
+                <h2>Comments:</h2>
+                <ul>
+                        {comments.map(comment => (
+                    <div className='separatecomment'>
+                            <li key={comment._id}>
+                                    <p>{comment.text}</p> {/*comment.author.email*/}
+                            </li>
+                    </div>
+                        ))}
+                </ul>
+                {comments.length === 0 && <p>No comments yet</p>}
+            </div>
+
+            
         </>
     )
 }
