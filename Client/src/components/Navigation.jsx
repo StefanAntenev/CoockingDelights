@@ -16,7 +16,7 @@ export default function Navigation() {
                         <li><Link className="navbutton" to="/search" >Search</Link></li>
                         <li><Link className="navbutton" to="/contacts" >Contact</Link></li>
                         <li><Link className="navbutton" to="/about" >About</Link></li>
-                        <li><a className="navbutton" href='/logout' onClick={(e) => e.preventDefault()}>Logout</a></li>
+                        <li><Link className="navbutton" to='/logout' >Logout</Link></li>
                         <li><Link className="profilebutton" to="/profile" >Profile</Link></li>
                     </ul>
                 ) : (
