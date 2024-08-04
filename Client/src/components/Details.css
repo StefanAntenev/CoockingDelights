@@ -123,3 +123,12 @@
     font-synthesis: none;
     overflow: hidden;
 }
+
+.separatecomment{
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: #bb4500;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}

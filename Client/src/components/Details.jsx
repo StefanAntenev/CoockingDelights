@@ -24,7 +24,7 @@ export default function Recipie() {
             const newComment = await createComment(recipieId, comment)
 
             setComments(oldComments => [...oldComments, newComment]);
-        } catch (err) { 
+        } catch (err) {
             console.error(err.message)
         }
     });
@@ -48,11 +48,13 @@ export default function Recipie() {
             <div className="comments">
                 <h2>Comments:</h2>
                 <ul>
-                    {comments.map(comment => (
-                        <li key={comment._id}>
-                            <p>username: {comment.text}</p>
-                        </li>
-                    ))}
+                        {comments.map(comment => (
+                    <div className='separatecomment'>
+                            <li key={comment._id}>
+                                <p>{comment.author.email}: {comment.text}</p>
+                            </li>
+                    </div>
+                        ))}
                 </ul>
                 {comments.length === 0 && <p>No comments yet</p>}
             </div>

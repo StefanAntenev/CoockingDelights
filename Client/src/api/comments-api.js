@@ -7,6 +7,7 @@ const create = (recipieId, text) => requester.post(BASE_URL, { recipieId, text }
 const getAll = (recipieId) => {
     const params = new URLSearchParams({ 
         where: `recipieId="${recipieId}"`,
+        load: `author=_ownerId:users`
     });
     return requester.get(`${BASE_URL}?${params.toString()}`);
 }
