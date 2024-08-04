@@ -17,6 +17,7 @@ import Recipies from './components/Recipies'
 import Profile from './components/Profile'
 import NotFound from './components/NotFound'
 import ScrollBtn from './components/ScrollBtn'
+import Logout from './components/Logout'
 
 import './App.css'
 
@@ -34,6 +35,7 @@ function App() {
                     <Route path="/create" element={<Create />} />
                     <Route path="/search" element={<Search />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/logout" element={<Logout />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path="/profile" element={<Profile />} />
