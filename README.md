@@ -7,6 +7,8 @@ This is a personal homework project. Its purpous is to be a standard library for
 - Add / Remove recipes
 - Comment on a recipe
 
+## Getting started
+
 How to start the app.
 - run npm run debug in client dir to start React.
 - run node server.js in server dir to start the server.
