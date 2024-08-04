@@ -11,34 +11,34 @@ Steps:
 - [x] add client
 - [x] add server
 
-- [ ] Add the README.md info
+- [x] Add the README.md info
 
 ## Comments
-- [ ] Create service for nested resource `comments`
-- [ ] Post comment to server
-- [ ] Read comments from server
-- [ ] Add comments in the component
-- [ ] clear comments form
+- [x] Create service for nested resource `comments`
+- [x] Post comment to server
+- [x] Read comments from server
+- [x] Add comments in the component
+- [x] clear comments form
 
 ## API Hooks
 - [x] Form Hook
 - [x] RecipeAPI Hooks
-- [ ] Comment Hooks
+- [x] Comment Hooks
 
 ## Authentication
 - [ ] Auth API
     - [x] Login
     - [x] Register
-    - [ ] Logout
-- [ ] Auth API Hook
+    - [x] Logout
+- [x] Auth API Hook
     - [x] Login
     - [x] Register
-    - [ ] Logout
+    - [x] Logout
 - [x] Auth state & context
 - [x] Token management
 - [x] Login
 - [x] Register
-- [ ] Logout
+- [x] Logout
 - [x] Authorized Requests
 
 ## UI Implementation
