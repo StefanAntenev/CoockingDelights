@@ -1,18 +1,16 @@
 import requester from './requester';
 
-const BASE_URL = 'http://localhost:3030/data/recipies';
+const BASE_URL = 'http://localhost:3030/data/comments';
 
-const buildUrl = (recipieId) => `${BASE_URL}/${recipieId}/comments`;
+const create = (recipieId, text) => requester.post(BASE_URL, { recipieId, text });
 
-const create = async (recipieId, username, text) => requester.post(buildUrl(recipieId), { username, text });
-
-const getAll = async (recipieId) => {
-    const result = requester.get(buildUrl(recipieId)); 
-
-    const comments = Object.values(result);
-
-    return comments;
+const getAll = (recipieId) => {
+    const params = new URLSearchParams({ 
+        where: `recipieId="${recipieId}"`,
+    });
+    return requester.get(`${BASE_URL}?${params.toString()}`);
 }
+
 
 const commentsAPI = {
     create,

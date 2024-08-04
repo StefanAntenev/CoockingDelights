@@ -30,3 +30,11 @@
     margin: 20px;
 
 }
+
+.separateComment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    list-style: none;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
