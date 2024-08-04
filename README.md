@@ -47,3 +47,5 @@ Steps:
     - [x] Api function
     - [x] Hook
 - [ ] Fix latest games fetch
+- [ ] Edit recipe
+- [ ] Delete recipe
