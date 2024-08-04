@@ -38,3 +38,88 @@
     margin-bottom: 10px;
     border-radius: 8px;
 }
+
+.create-comment {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 120px;
+    background-color: #dadada6b;
+    padding: 20px;
+    width: 500px;
+    border: 1px solid #ccc;
+    max-width: 50%;
+    width: 40%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 18px 12px rgba(0, 0, 0, 0.5);
+    font-family: Inter, system-ui, Avenir, Arial, Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+    color-scheme: light dark;
+    font-synthesis: none;
+    overflow: hidden;
+}
+
+.btn-submit {
+    border-radius: 8px;
+    border: 3px solid transparent;
+    margin: auto 150px;
+    padding: 0.5em 0.8em;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease, border-color 0.7s;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.btn-submit:hover {
+    border-color: #bb4500;
+    transform: scale(1.2);
+    /* Scales the button to 110% on hover */
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.btn-submit:focus,
+.btn-submit:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+    .btn-submit {
+        color: #213547;
+        background-color: #ffffff;
+    }
+
+    .btn-submit:hover {
+        color: #747bff;
+    }
+
+    .btn-submit {
+        background-color: #f9f9f9;
+    }
+}
+
+.comments{
+    max-width: 600px;
+    margin: 10px auto;
+    margin-bottom: 60px;
+    margin-top: 120px;
+    background-color: #dadada6b;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 18px 12px rgba(0, 0, 0, 0.5);
+    font-family: Inter, system-ui, Avenir, Arial, Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+    color-scheme: light dark;
+    font-synthesis: none;
+    overflow: hidden;
+}

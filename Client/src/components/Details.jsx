@@ -19,8 +19,14 @@ export default function Recipie() {
         changeHandler,
         submitHandler,
         values
-    } = useForm(initialValues, ({ comment }) => {
-        createComment(recipieId, comment);
+    } = useForm(initialValues, async ({ comment }) => {
+        try {
+            const newComment = await createComment(recipieId, comment)
+
+            setComments(oldComments => [...oldComments, newComment]);
+        } catch (err) { 
+            console.error(err.message)
+        }
     });
 
 
@@ -44,7 +50,7 @@ export default function Recipie() {
                 <ul>
                     {comments.map(comment => (
                         <li key={comment._id}>
-                            <p>{comment.text}</p>
+                            <p>username: {comment.text}</p>
                         </li>
                     ))}
                 </ul>
