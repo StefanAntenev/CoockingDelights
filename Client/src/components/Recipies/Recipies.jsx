@@ -1,7 +1,7 @@
 import './Recipies.css';
 
 import Recipie from "./Recipie";
-import { useGetAllRecipes } from '../hooks/useRecipes';
+import { useGetAllRecipes } from '../../hooks/useRecipes';
 
 export default function Recipies() {
     const [recipes] = useGetAllRecipes();

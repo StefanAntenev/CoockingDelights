@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Create.css';
-import { useForm } from '../hooks/useForm';
+import { useForm } from '../../hooks/useForm';
 import { useNavigate } from 'react-router-dom';
-import { useCreateRecipe } from '../hooks/useRecipes';
+import { useCreateRecipe } from '../../hooks/useRecipes';
 
 const initialValues = {
     name: '',
@@ -17,6 +17,18 @@ export default function Create() {
     const createRecipe = useCreateRecipe();
 
     const createHandler = async (values) => {
+        // Check if all fields are filled
+        if (
+            values.name.trim() === '' ||
+            values.image.trim() === '' ||
+            values.Ingredients.trim() === '' ||
+            values.Instructions.trim() === '' ||
+            values.description.trim() === ''
+        ) {
+            alert('All fields must be filled.');
+            return;
+        }
+
         try {
             const { _id } = await createRecipe(values);
             navigate(`/recipies/${_id}/details`);

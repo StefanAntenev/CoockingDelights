@@ -1,8 +1,8 @@
 import './Register.css'
 
-import { useRegister } from '../hooks/useAuth';
+import { useRegister } from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
-import { useForm } from '../hooks/useForm';
+import { useForm } from '../../hooks/useForm';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 

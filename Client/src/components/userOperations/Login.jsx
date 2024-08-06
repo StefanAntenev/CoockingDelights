@@ -1,6 +1,6 @@
-import { useForm } from '../hooks/useForm';
+import { useForm } from '../../hooks/useForm';
 import './Login.css';
-import { useLogin } from '../hooks/useAuth';
+import { useLogin } from '../../hooks/useAuth';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 

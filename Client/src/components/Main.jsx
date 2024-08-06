@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Home from "./Home";
 
 import recipiesAPI from '../api/recipies-api';
-import LatestRecipie from './LatestRecipie';
+import LatestRecipie from './Recipies/LatestRecipie';
 
 
 export default function Main() {
@@ -11,7 +11,6 @@ export default function Main() {
 
     useEffect(() => {
         (async () => {
-            //TODO: mod to fetch only latest games
             const result = await recipiesAPI.getALL();
 
             setLatestRecipie(result.reverse().slice(0, 1));

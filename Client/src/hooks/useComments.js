@@ -18,6 +18,5 @@ export function useGetAllComments(recipieId) {
         })();
     }, [recipieId]);
 
-
     return [comments, setComments];
 }
