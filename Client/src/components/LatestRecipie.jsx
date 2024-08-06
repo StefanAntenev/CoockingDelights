@@ -16,7 +16,7 @@ export default function LatestRecipie({
             </Link>
             <h2>{name}</h2>
             <p>{description}</p>
-            <Link to={`/recipies/${_id}/details`} className="detailsBtn">details</Link>
+            <Link to={`/recipies/${_id}/details`} ><button className="detailsBtn2">details</button></Link>
         </div>
     );
 }

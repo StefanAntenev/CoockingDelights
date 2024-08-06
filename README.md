@@ -32,7 +32,7 @@ Steps:
 - [x] Comment Hooks
 
 ## Authentication
-- [ ] Auth API
+- [x] Auth API
     - [x] Login
     - [x] Register
     - [x] Logout

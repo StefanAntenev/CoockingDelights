@@ -18,6 +18,7 @@ import Profile from './components/Profile'
 import NotFound from './components/NotFound'
 import ScrollBtn from './components/ScrollBtn'
 import Logout from './components/Logout'
+import RecipieEdit from './components/RecipieEdit'
 
 import './App.css'
 
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/recipies" element={<Recipies />} />
                     <Route path="/recipies/:recipieId/details" element={<Details />} />
+                    <Route path="/recipies/:recipieId/edit" element={<RecipieEdit />} />
                     <Route path="/create" element={<Create />} />
                     <Route path="/search" element={<Search />} />
                     <Route path="/register" element={<Register />} />

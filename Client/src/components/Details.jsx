@@ -1,15 +1,19 @@
 import './Details.css';
-import { useParams } from 'react-router-dom';
+import { useParams , useNavigate } from 'react-router-dom';
 import { useGetOneRecipe } from '../hooks/useRecipes';
 import { useForm } from '../hooks/useForm';
 import { useCreateComment, useGetAllComments } from '../hooks/useComments';
 import { useAuthContext } from '../contexts/AuthContext';
+import { Link } from 'react-router-dom';
+
+import recipieAPI from '../api/recipies-api';
 
 const initialValues = {
     comment: ''
 }
 
 export default function Recipie() {
+    const navigate = useNavigate();
     const { recipieId } = useParams();
     const [comments, setComments] = useGetAllComments(recipieId);
     const createComment = useCreateComment();
@@ -31,6 +35,16 @@ export default function Recipie() {
         }
     });
 
+    const gameDeleteHandler = async () => { 
+        try {
+            await recipieAPI.remove(recipieId);
+
+            navigate('/recipies');
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+
     const isOwner = userId === recipie._ownerId
 
     return (
@@ -48,8 +62,8 @@ export default function Recipie() {
                 <p>{recipie.Instructions}</p>
                 {isOwner && (
                     <div>
-                        <input href='#' className='button' value='Edit'></input>
-                        <input href='#' className='button' value='Delete'></input>
+                        <Link to={`/recipies/${recipieId}/edit`} className='button-edit'><input className='button' value="Edit"></input></Link>
+                        <input onClick={gameDeleteHandler} className='button' value='Delete'></input>
                         <a></a>
                     </div>
                 )}
@@ -75,8 +89,8 @@ export default function Recipie() {
                 <ul>
                         {comments.map(comment => (
                     <div className='separatecomment'>
-                            <li key={comment._id}>
-                                    <p>{comment.text}</p> {/*comment.author.email*/}
+                            <li key={comment._id} className='li-element'>
+                                    <p>{comment.text}</p> {/*comment.author.email - not working need to refresh to see user*/}
                             </li>
                     </div>
                         ))}
