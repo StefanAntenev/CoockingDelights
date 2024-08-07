@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom'
 import { AuthContextProvider } from './contexts/AuthContext'
 
 import Navigation from './components/NavBar + Footer/Navigation'
-import Home from './components/Home'
 import Main from './components/Main'
 import Create from './components/Recipies/Create'
 import Footer from './components/NavBar + Footer/Footer'
@@ -21,6 +20,7 @@ import Logout from './components/userOperations/Logout'
 import RecipieEdit from './components/Recipies/RecipieEdit'
 
 import './App.css'
+import Guard from './components/common/Guard'
 
 function App() {
 
@@ -31,18 +31,19 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Main />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contacts" element={<Contacts />} />
+                    <Route path="/*" element={<NotFound />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route element={<Guard />}>
                     <Route path="/recipies" element={<Recipies />} />
                     <Route path="/recipies/:recipieId/details" element={<Details />} />
                     <Route path="/recipies/:recipieId/edit" element={<RecipieEdit />} />
                     <Route path="/create" element={<Create />} />
-                    <Route path="/search" element={<Search />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/logout" element={<Logout />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contacts" element={<Contacts />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/*" element={<NotFound />} />
-
+                    <Route path="/logout" element={<Logout />} />
+                    </Route>
                 </Routes>
                 <ScrollBtn />
                 <Footer />
