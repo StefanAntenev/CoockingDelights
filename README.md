@@ -60,3 +60,13 @@ Steps:
 - [ ] Fix latest games fetch
 - [x] Edit recipe
 - [x] Delete recipe
+
+## Profile Page
+
+- [ ] 
+     Not Working atm.
+
+## Search Recipe
+
+- [ ] 
+     Not Working atm.
